@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$bg-color: #fafafa;
+$border-color: #b8b5ff;
+$bg-color-file-container: #eee;
+$link-color: #b8b5ff;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $bg-color;
+}
+
+.container {
+  max-width: 800px;
+  min-width: 320px;
+  padding: 0 25px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h1 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: #7868e6;
+      margin-top: 4px;
+    }
+  }
+
+  .read-file {
+    border: 4px $border-color dashed;
+    width: 100%;
+    border-radius: 4px;
+    height: 200px;
+    background-color: $bg-color-file-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      margin-top: 8px;
+    }
+
+    .file {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input[type="file"] {
+        display: none;
+      }
+
+      label {
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        outline: 0;
+        user-select: none;
+        border-radius: 4px;
+        background-color: $border-color;
+        color: hsl(0, 0%, 29%);
+        padding: 16px 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        i {
+          margin-right: 8px;
+        }
+        &:hover {
+          background-color: #7868e6;
+        }
+      }
+    }
+  }
+
+  .file-uploaded {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px $border-color solid;
+    border-radius: 4px;
+    .file-details {
+      padding: 16px;
+      border-bottom: 2px $border-color solid;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      div {
+        display: flex;
+        margin-left: 16px;
+        align-items: center;
+        label {
+          margin-right: 8px;
+        }
+        select {
+          border-color: #7868e6;
+          padding: 6px;
+          border-radius: 4px;
+          color: #7868e6;
+          &:focus-visible {
+            outline: none;
+          }
+        }
+      }
+      .remove {
+        cursor: pointer;
+        &:hover {
+          color: #ff3f00;
+        }
+      }
+    }
+    .file-convert {
+      display: flex;
+      justify-content: space-between;
+      background-color: $bg-color-file-container;
+      .file-name {
+        padding: 16px;
+        input {
+          padding: 6px;
+          border: 1px solid #7868e6;
+          border-radius: 4px;
+          &:focus-visible {
+            outline: none;
+          }
+        }
+      }
+      button {
+        background-color: $link-color;
+        border: none;
+        width: 150px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        &:hover {
+          background-color: #7868e6;
+        }
+      }
+    }
+  }
+}

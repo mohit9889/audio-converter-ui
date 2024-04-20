@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 800px;
+  min-width: 320px;
+  padding: 0 25px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container .heading h1 {
+  margin-bottom: 16px;
+}
+.container .heading p {
+  margin-bottom: 4px;
+}
+.container .heading a {
+  color: #7868e6;
+  margin-top: 4px;
+}
+.container .read-file {
+  border: 4px #b8b5ff dashed;
+  width: 100%;
+  border-radius: 4px;
+  height: 200px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .read-file span {
+  margin-top: 8px;
+}
+.container .read-file .file {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .read-file .file input[type=file] {
+  display: none;
+}
+.container .read-file .file label {
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 4px;
+  background-color: #b8b5ff;
+  color: hsl(0, 0%, 29%);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container .read-file .file label i {
+  margin-right: 8px;
+}
+.container .read-file .file label:hover {
+  background-color: #7868e6;
+}
+.container .file-uploaded {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px #b8b5ff solid;
+  border-radius: 4px;
+}
+.container .file-uploaded .file-details {
+  padding: 16px;
+  border-bottom: 2px #b8b5ff solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .file-uploaded .file-details div {
+  display: flex;
+  margin-left: 16px;
+  align-items: center;
+}
+.container .file-uploaded .file-details div label {
+  margin-right: 8px;
+}
+.container .file-uploaded .file-details div select {
+  border-color: #7868e6;
+  padding: 6px;
+  border-radius: 4px;
+  color: #7868e6;
+}
+.container .file-uploaded .file-details div select:focus-visible {
+  outline: none;
+}
+.container .file-uploaded .file-details .remove {
+  cursor: pointer;
+}
+.container .file-uploaded .file-details .remove:hover {
+  color: #ff3f00;
+}
+.container .file-uploaded .file-convert {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+.container .file-uploaded .file-convert .file-name {
+  padding: 16px;
+}
+.container .file-uploaded .file-convert .file-name input {
+  padding: 6px;
+  border: 1px solid #7868e6;
+  border-radius: 4px;
+}
+.container .file-uploaded .file-convert .file-name input:focus-visible {
+  outline: none;
+}
+.container .file-uploaded .file-convert button {
+  background-color: #b8b5ff;
+  border: none;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container .file-uploaded .file-convert button:hover {
+  background-color: #7868e6;
+}/*# sourceMappingURL=style.css.map */

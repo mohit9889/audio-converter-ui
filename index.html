@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Converter</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <div id="app" class="container">
+      <!-- Heading -->
+      <div class="heading">
+        <h1>Audio Converter</h1>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.npmjs.com/package/light-audio-converter"
+            >light-audio-converter NPM Package</a
+          >, a Node.js package, streamlines the conversion of audio files,
+          making it easy to switch between formats. With its intuitive API,
+          transform your audio files effortlessly.
+        </p>
+      </div>
+
+      <!-- File Read -->
+      <div id="read-file" class="read-file">
+        <div class="file file--upload">
+          <label for="input-file">
+            <i class="material-icons">cloud_upload</i>Choose File
+          </label>
+          <input id="input-file" type="file" />
+        </div>
+        <span>Or drag you audio file here</span>
+      </div>
+
+      <!-- After Upload -->
+      <div id="after-upload" class="file-uploaded" style="display: none">
+        <div class="file-details">
+          <span id="file-name"></span>
+          <div>
+            <span id="file-size"></span>
+            <div class="output-format">
+              <label for="output">Output:</label>
+              <select name="output" id="output">
+                <option value="mp3">MP3</option>
+                <option value="wav">WAV</option>
+                <option value="aac">AAC</option>
+                <option value="ogg">OGG</option>
+                <option value="flac">FLAC</option>
+                <option value="aiff">AIFF</option>
+                <option value="wma">WMA</option>
+                <option value="m4a">M4A</option>
+              </select>
+            </div>
+          </div>
+          <i id="remove-icon" class="remove material-icons"> cancel </i>
+        </div>
+        <div class="file-convert">
+          <div class="file-name">
+            <label for="output-file-name">File Name:</label>
+            <input id="output-file-name" type="text" />
+          </div>
+          <button id="convert-button">Convert</button>
+          <button id="download-button">Download</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>
